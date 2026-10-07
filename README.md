@@ -11,24 +11,24 @@
  
 ### Windows
  
-1. Scarica `ESC-SafeDoc_3.8.2_x64-setup.exe`
+1. Scarica `ESC-SafeDoc_3.8.3_x64-setup.exe`
 2. Esegui il file e segui la procedura guidata
 3. Al termine, l'app sarà disponibile nel menu Start
 ### macOS
  
-1. Scarica `ESC-SafeDoc_3.8.2_aarch64.dmg`
+1. Scarica `ESC-SafeDoc_3.8.3_aarch64.dmg`
 2. Apri il file `.dmg` e trascina **ESC SafeDoc** nella cartella Applicazioni
 3. Al primo avvio, se macOS mostra un avviso di sicurezza, apri **Preferenze di Sistema → Privacy e Sicurezza** e conferma l'apertura dell'app
 ### Linux
  
-1. Scarica `ESC-SafeDoc_3.8.2_amd64.AppImage`
+1. Scarica `ESC-SafeDoc_3.8.3_amd64.AppImage`
 2. Rendi il file eseguibile:
 ```bash
-   chmod +x ESC-SafeDoc_3.8.2_amd64.AppImage
+   chmod +x ESC-SafeDoc_3.8.3_amd64.AppImage
 ```
 3. Avvia l'app con doppio click o da terminale:
 ```bash
-   ./ESC-SafeDoc_3.8.2_amd64.AppImage
+   ./ESC-SafeDoc_3.8.3_amd64.AppImage
 ```
  
 ## Utilizzo
@@ -51,4 +51,4 @@ Ogni installer è distribuito insieme a una firma digitale (file `.sig`) che ne 
 Per problemi, richieste o segnalazioni, contattare ESC Enterprise Software Consulting S.R.L.
  
 ---
-Versione corrente: **3.8.2**
+Versione corrente: **3.8.3**
