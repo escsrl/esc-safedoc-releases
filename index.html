@@ -63,7 +63,7 @@
                 </div>
 
                 <div class="panel" aria-label="Esempio di anonimizzazione">
-                    <div class="panel-bar"><i></i><i></i><i></i><span>SafeDoc · sessione 7F3A-21</span></div>
+                    <div class="panel-bar"><i></i><i></i><i></i><span>SafeDoc · sessione ESC-20261007-7F3A</span></div>
                     <div class="sd-split">
                         <div class="sd-half">
                             <div class="sd-file">Originale <b>Contratto_Rossi.pdf</b></div>
@@ -79,9 +79,9 @@
                         </div>
                         <div class="sd-arrow">anonimizza</div>
                         <div class="sd-half">
-                            <div class="sd-file">Da inviare all'AI <b>Contratto_Rossi_SICURO.pdf</b></div>
+                            <div class="sd-file">Da inviare all'AI <b>Contratto_Rossi_SICURO_generico_7F3A.pdf</b></div>
                             <div class="sd-doc">
-                                <div><span class="lbl">Cliente </span><span class="sd-code">PER_000001</span> · <span
+                                <div><span class="lbl">Cliente </span><span class="sd-code">PERSON_000001</span> · <span
                                         class="sd-code">ORG_000001</span></div>
                                 <div><span class="lbl">C.F. </span><span class="sd-code">CF_000001</span></div>
                                 <div><span class="lbl">Email </span><span class="sd-code">EMAIL_000001</span></div>
@@ -148,32 +148,35 @@
                 <div class="sec-head">
                     <div class="eyebrow">Funzioni</div>
                     <h2>Conformità e produttività, <em>insieme.</em></h2>
-                    <p>Per studi, PMI e team che vogliono usare l'AI generativa restando in regola con il GDPR.</p>
+                    <p>Per studi, PMI e team che vogliono usare l'AI generativa riducendo l'esposizione dei dati personali.</p>
                 </div>
                 <div class="feats">
                     <div class="feat">
                         <div class="k">offline</div>
-                        <h3>Nessun dato in rete</h3>
-                        <p>L'elaborazione avviene interamente sul computer. Gli originali non vengono copiati né
-                            caricati su alcun server.</p>
+                        <h3>I documenti restano sul computer</h3>
+                        <p>L'elaborazione avviene interamente sul computer. I documenti non vengono copiati né
+                            caricati su alcun server: la rete serve solo, su tua richiesta, per gli aggiornamenti e per
+                            scaricare i modelli di riconoscimento.</p>
                     </div>
                     <div class="feat">
                         <div class="k">pattern + NER</div>
                         <h3>Riconoscimento in italiano</h3>
-                        <p>Pattern per email, IBAN, codice fiscale e partita IVA. Un modello linguistico italiano trova
-                            nomi e organizzazioni nel testo libero.</p>
+                        <p>Oltre 25 regole per email, IBAN, codice fiscale, partita IVA, telefoni, date, importi,
+                            indirizzi, CAP e targhe, con controllo delle cifre. Un modello linguistico italiano trova
+                            nomi e organizzazioni nel testo libero; un secondo modello copre i nomi stranieri.</p>
                     </div>
                     <div class="feat">
                         <div class="k">reversibile</div>
-                        <h3>Chiave cifrata per sessione</h3>
-                        <p>I codici tornano ai valori reali con la chiave della sessione. Ogni operazione resta nello
-                            storico con esito e verifica.</p>
+                        <h3>Chiave di ripristino per sessione</h3>
+                        <p>I codici tornano ai valori reali con la chiave della sessione, che resta solo sul tuo disco.
+                            Ogni operazione resta nello storico con esito e verifica.</p>
                     </div>
                     <div class="feat">
                         <div class="k">PDF · DOCX · XLSX · EML</div>
                         <h3>Multi-formato</h3>
-                        <p>PDF, Word, Excel, email con allegati, TXT, CSV, JSON. I PDF possono uscire in Word con il
-                            layout preservato.</p>
+                        <p>PDF, Word, Excel, email con gli allegati supportati, TXT, Markdown, CSV, JSON. In Word ed
+                            Excel vengono trattati anche commenti, intestazioni e proprietà del file. I PDF possono
+                            uscire in Word con il layout preservato (richiede LibreOffice).</p>
                     </div>
                     <div class="feat">
                         <div class="k">marcatore #</div>
@@ -190,14 +193,40 @@
                     <div class="feat">
                         <div class="k">regole</div>
                         <h3>Regole su misura, senza codice</h3>
-                        <p>Liste di parole, regole pronte per ragioni sociali, CAP e targhe, generatore da schema.
-                            Niente espressioni regolari.</p>
+                        <p>Liste di parole, elenchi importati da CSV o Excel (anche con errori di battitura), regole
+                            pronte per ragioni sociali, CAP e targhe, generatore da schema. Niente espressioni
+                            regolari.</p>
                     </div>
                     <div class="feat">
                         <div class="k">marchio</div>
                         <h3>Marchio di sessione</h3>
-                        <p>Ogni documento protetto porta il marchio ESC e l'ID di sessione, nel testo e nei metadati,
-                            per il ripristino automatico.</p>
+                        <p>Ogni documento protetto porta il marchio ESC e l'ID di sessione, usati per il ripristino
+                            automatico: nelle proprietà del file e, per PDF, testo, CSV ed email, anche come riga
+                            visibile.</p>
+                    </div>
+                    <div class="feat">
+                        <div class="k">revisione</div>
+                        <h3>Conferma prima di scrivere</h3>
+                        <p>Opzionale: vedi l'elenco di ciò che è stato trovato, togli i falsi allarmi, aggiungi ciò che
+                            manca. Solo dopo la tua conferma viene creato il documento.</p>
+                    </div>
+                    <div class="feat">
+                        <div class="k">leggero · equilibrato · preciso</div>
+                        <h3>Modelli a scelta</h3>
+                        <p>Scegli la dimensione del modello italiano in base al computer e ai documenti; i modelli più
+                            precisi si scaricano solo quando servono.</p>
+                    </div>
+                    <div class="feat">
+                        <div class="k">LLM locale · opzionale</div>
+                        <h3>Un secondo controllo, sul tuo PC</h3>
+                        <p>Con Ollama installato, un modello locale suggerisce i nomi che gli altri livelli non
+                            trovano. I suggerimenti compaiono nella revisione e non vengono mai applicati da soli.</p>
+                    </div>
+                    <div class="feat">
+                        <div class="k">setup</div>
+                        <h3>Verifica e configurazione guidata</h3>
+                        <p>Prova le tue impostazioni su un documento di esempio, ripeti la configurazione guidata ed
+                            esporta le scelte per usarle su un altro computer.</p>
                     </div>
                 </div>
             </div>
@@ -209,22 +238,26 @@
                     <div class="eyebrow">Privacy by design</div>
                     <h2>I dati non escono <em>dal perimetro.</em></h2>
                     <p>Nessun cloud, nessun account, nessuna telemetria. SafeDoc è un'app desktop che lavora anche senza
-                        connessione.</p>
+                        connessione; la rete serve solo, su richiesta, per gli aggiornamenti e per scaricare i modelli
+                        di riconoscimento.</p>
                     <ul class="check">
                         <li>Elaborazione 100% locale, anche offline</li>
                         <li>Chiavi di ripristino salvate solo sul tuo disco</li>
-                        <li>Storico e impostazioni nella cartella di progetto</li>
-                        <li>Nessun componente AGPL/GPL: distribuibile in azienda</li>
+                        <li>Storico e impostazioni nella cartella ESC SafeDoc sul tuo computer</li>
+                        <li>Controllo dei residui a ogni anonimizzazione, con revisione prima di scrivere</li>
                     </ul>
+                    <p class="form-note">SafeDoc sostituisce i dati con codici reversibili (pseudonimizzazione) usando
+                        regole e modelli: nessun riconoscimento è perfetto. Per questo ci sono la revisione e il
+                        controllo dei residui; sui documenti molto delicati controlla sempre il risultato.</p>
                 </div>
                 <div class="panel">
                     <div class="panel-bar"><i></i><i></i><i></i><span>storico · oggi</span></div>
                     <div class="panel-body log">
-                        <div><span>09:14:02</span><span>Contratto_Rossi.pdf → _SICURO.pdf · 5 entità</span></div>
-                        <div><span>09:14:02</span><span>chiave 7F3A-21 salvata in ./sessioni</span></div>
-                        <div><span>09:31:47</span><span>Risposta_AI.docx ricevuta · marchio 7F3A-21</span></div>
-                        <div><span>09:31:48</span><span class="ok">riconciliazione: 5 / 5 ripristinate</span></div>
-                        <div><span>09:31:48</span><span class="ok">verifica residui: nessun codice rimasto</span></div>
+                        <div><span>09:14:02</span><span>Contratto_Rossi.pdf → _SICURO_generico_7F3A.pdf · 5 entità</span></div>
+                        <div><span>09:14:02</span><span>chiave ESC-20261007-7F3A salvata in ESC_Chiavi</span></div>
+                        <div><span>09:31:47</span><span>Risposta_AI.docx ricevuta · marchio ESC-20261007-7F3A</span></div>
+                        <div><span>09:31:48</span><span class="ok">Entità ripristinate: 5/5 (100%)</span></div>
+                        <div><span>09:31:48</span><span class="ok">verifica: nessun codice rimasto nel testo</span></div>
                     </div>
                 </div>
             </div>
@@ -243,11 +276,11 @@
                     </div>
                     <div>
                         <h3>PMI e uffici HR</h3>
-                        <p>CV, buste paga e comunicazioni gestiti senza esporre i dati dei dipendenti.</p>
+                        <p>CV, buste paga e comunicazioni gestiti riducendo l'esposizione dei dati dei dipendenti.</p>
                     </div>
                     <div>
                         <h3>Sanità e PA</h3>
-                        <p>Documenti clinici e amministrativi anonimizzati prima di qualsiasi elaborazione esterna.</p>
+                        <p>Nomi, codici e riferimenti dei documenti clinici e amministrativi sostituiti prima di qualsiasi elaborazione esterna. Le diagnosi scritte in testo libero richiedono la revisione manuale.</p>
                     </div>
                 </div>
             </div>
@@ -276,7 +309,11 @@
                         <p class="dl-ok">Grazie. Scegli la versione per il tuo sistema.</p>
                         <div class="dl" id="dl-list" style="margin-top:10px"></div>
                     </div>
-                    <p class="form-note">Usiamo i dati solo per avvisarti degli aggiornamenti di SafeDoc.</p>
+                    <p class="form-note">Usiamo nome, cognome ed email solo per avvisarti degli aggiornamenti di
+                        SafeDoc. Puoi chiederne la cancellazione scrivendo a info@esconsulting.it.</p>
+                    <p class="form-note">macOS: solo Mac con Apple Silicon. L'app non è firmata da Apple: al primo
+                        avvio apri Impostazioni di Sistema → Privacy e sicurezza → «Apri comunque». Windows e Linux:
+                        64 bit.</p>
                 </form>
             </div>
         </section>
@@ -333,7 +370,7 @@
             var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzy3-j8kd2buEs16YjIqAokaPN02lptqcfhKq2y0UnOjflTW4HdOm53EbOc_gKfYLOH/exec";
             var LINKS = {
                 windows: { label: "Windows", file: ".exe · 64 bit", url: "https://github.com/escsrl/esc-safedoc-releases/releases/download/v3.8.2/ESC-SafeDoc_3.8.2_x64-setup.exe" },
-                macos: { label: "macOS", file: ".dmg · Apple Silicon", url: "https://github.com/escsrl/esc-safedoc-releases/releases/download/v3.8.2/ESC-SafeDoc_3.8.2_aarch64.dmg" },
+                macos: { label: "macOS", file: ".dmg · Apple Silicon (M1 e successivi)", url: "https://github.com/escsrl/esc-safedoc-releases/releases/download/v3.8.2/ESC-SafeDoc_3.8.2_aarch64.dmg" },
                 linux: { label: "Linux", file: ".AppImage · amd64", url: "https://github.com/escsrl/esc-safedoc-releases/releases/download/v3.8.2/ESC-SafeDoc_3.8.2_amd64.AppImage" }
             };
             var os = window.escDetectOS();
