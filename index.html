@@ -341,7 +341,7 @@
                         rel="noopener">GitHub</a>
                 </div>
             </div>
-            <div class="foot-copy"><span>© 2026 ESC Enterprise Software Consulting srl · dal 2003</span><span>v3.8.2 ·
+            <div class="foot-copy"><span>© 2026 ESC Enterprise Software Consulting srl · dal 2003</span><span>v3.8.3 ·
                     Elaborazione esclusivamente locale</span></div>
         </div>
     </footer>
@@ -369,9 +369,9 @@
         (function () {
             var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzy3-j8kd2buEs16YjIqAokaPN02lptqcfhKq2y0UnOjflTW4HdOm53EbOc_gKfYLOH/exec";
             var LINKS = {
-                windows: { label: "Windows", file: ".exe · 64 bit", url: "https://github.com/escsrl/esc-safedoc-releases/releases/download/v3.8.2/ESC-SafeDoc_3.8.2_x64-setup.exe" },
-                macos: { label: "macOS", file: ".dmg · Apple Silicon (M1 e successivi)", url: "https://github.com/escsrl/esc-safedoc-releases/releases/download/v3.8.2/ESC-SafeDoc_3.8.2_aarch64.dmg" },
-                linux: { label: "Linux", file: ".AppImage · amd64", url: "https://github.com/escsrl/esc-safedoc-releases/releases/download/v3.8.2/ESC-SafeDoc_3.8.2_amd64.AppImage" }
+                windows: { label: "Windows", file: ".exe · 64 bit", url: "https://github.com/escsrl/esc-safedoc-releases/releases/download/v3.8.3/ESC-SafeDoc_3.8.3_x64-setup.exe" },
+                macos: { label: "macOS", file: ".dmg · Apple Silicon (M1 e successivi)", url: "https://github.com/escsrl/esc-safedoc-releases/releases/download/v3.8.3/ESC-SafeDoc_3.8.3_aarch64.dmg" },
+                linux: { label: "Linux", file: ".AppImage · amd64", url: "https://github.com/escsrl/esc-safedoc-releases/releases/download/v3.8.3/ESC-SafeDoc_3.8.3_amd64.AppImage" }
             };
             var os = window.escDetectOS();
             if (LINKS[os]) {
@@ -390,7 +390,7 @@
                     var a = document.createElement("a");
                     a.href = LINKS[k].url; a.rel = "noopener"; a.target = "_blank";
                     if (k === os) a.className = "primary";
-                    a.innerHTML = "↓ " + LINKS[k].label + " <span>" + LINKS[k].file + " · v3.8.2</span>";
+                    a.innerHTML = "↓ " + LINKS[k].label + " <span>" + LINKS[k].file + " · v3.8.3</span>";
                     list.appendChild(a);
                 });
                 document.getElementById("dl-wrap").hidden = false;
