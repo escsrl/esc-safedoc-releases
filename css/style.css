@@ -248,6 +248,29 @@ header.top {
     border-color: var(--grey-dim);
 }
 
+/* icona tema: sole in dark, luna in light */
+.theme-btn .i-moon {
+    display: none;
+}
+
+:root[data-theme="light"] .theme-btn .i-sun {
+    display: none;
+}
+
+:root[data-theme="light"] .theme-btn .i-moon {
+    display: inline;
+}
+
+@media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) .theme-btn .i-sun {
+        display: none;
+    }
+
+    :root:not([data-theme="dark"]) .theme-btn .i-moon {
+        display: inline;
+    }
+}
+
 @media (max-width: 900px) {
     .nav-links a:not(.btn) {
         display: none;
