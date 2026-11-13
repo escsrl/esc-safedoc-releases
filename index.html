@@ -5,410 +5,417 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="description"
-          content="ESC SafeDoc anonimizza i documenti in locale prima di condividerli con un'AI e ripristina i dati reali nella risposta.">
+        content="ESC SafeDoc anonimizza i documenti in locale prima di condividerli con un'AI e ripristina i dati reali nella risposta.">
     <title>ESC SafeDoc — Anonimizza i documenti prima dell'AI</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Open+Sans:wght@400;600&family=Spectral:ital,wght@1,400;1,500&display=swap">
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Open+Sans:wght@400;600&family=Spectral:ital,wght@1,400;1,500&display=swap">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-<header class="top">
-    <div class="wrap nav">
-        <a class="brand" href="#top" aria-label="SafeDoc, torna su">
-            <svg viewBox="0 0 136 136" aria-hidden="true">
-                <g transform="translate(0,136) scale(0.1,-0.1)" fill="currentColor">
-                    <path
+    <header class="top">
+        <div class="wrap nav">
+            <a class="brand" href="#top" aria-label="SafeDoc, torna su">
+                <svg viewBox="0 0 136 136" aria-hidden="true">
+                    <g transform="translate(0,136) scale(0.1,-0.1)" fill="currentColor">
+                        <path
                             d="M218 1308 c-9 -7 -55 -56 -102 -108 l-86 -94 0 -448 0 -448 85 0 85 0 0 -85 0 -85 448 0 448 0 97 107 97 107 -2 530 -3 531 -525 3 c-411 2 -530 -1 -542 -10z m207 -502 c41 -18 65 -52 72 -106 l6 -40 -112 0 c-61 0 -111 -4 -111 -9 0 -5 12 -23 26 -40 32 -39 87 -43 128 -10 25 20 29 20 43 6 22 -21 6 -41 -52 -63 -165 -63 -273 164 -122 256 38 24 75 25 122 6z m312 -10 c26 -23 27 -26 12 -41 -16 -16 -19 -16 -46 4 -24 18 -34 20 -56 12 -55 -21 -29 -57 56 -75 67 -15 90 -91 41 -137 -34 -32 -110 -34 -150 -4 -30 23 -33 35 -10 50 10 6 21 4 34 -9 14 -12 32 -16 59 -14 33 3 38 7 41 30 3 25 -1 28 -53 44 -64 18 -95 43 -95 77 0 75 107 115 167 63z m297 10 c44 -18 54 -35 31 -52 -16 -12 -21 -11 -37 3 -29 26 -88 20 -115 -12 -33 -37 -32 -107 2 -140 29 -30 89 -34 117 -8 17 16 20 16 36 -1 16 -16 16 -18 -8 -36 -38 -30 -84 -35 -136 -15 -58 22 -84 62 -84 130 0 111 93 173 194 131z" />
-                    <path
+                        <path
                             d="M333 765 c-27 -11 -53 -41 -53 -59 0 -3 38 -6 85 -6 69 0 85 3 85 15 0 16 -35 55 -49 55 -5 0 -15 2 -23 5 -7 2 -27 -2 -45 -10z" />
-                </g>
-            </svg>
-            <span class="brand-name">SafeDoc</span>
-            <span class="brand-by">by ESC</span>
-        </a>
-        <nav class="nav-links">
-            <a href="#come">Come funziona</a>
-            <a href="#funzioni">Funzioni</a>
-            <a href="#privacy">Privacy</a>
-            <a href="https://escsrl.github.io/prompt-book/" target="_blank" rel="noopener">PromptBook</a>
-            <button class="theme-btn" id="theme-btn" type="button" aria-label="Cambia tema"><span class="i-sun" aria-hidden="true">☀︎</span><span class="i-moon" aria-hidden="true">☾</span></button>
-            <a href="#download" class="btn btn-primary">Scarica Gratis</a>
-        </nav>
-    </div>
-</header>
+                    </g>
+                </svg>
+                <span class="brand-name">SafeDoc</span>
+                <span class="brand-by">by ESC</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#come">Come funziona</a>
+                <a href="#funzioni">Funzioni</a>
+                <a href="#privacy">Privacy</a>
+                <a href="https://escsrl.github.io/prompt-book/" target="_blank" rel="noopener">PromptBook</a>
+                <button class="theme-btn" id="theme-btn" type="button" aria-label="Cambia tema"><span class="i-sun"
+                        aria-hidden="true">☀︎</span><span class="i-moon" aria-hidden="true">☾</span></button>
+                <a href="#download" class="btn btn-primary">Scarica Gratis</a>
+            </nav>
+        </div>
+    </header>
 
-<main id="top">
-    <section class="hero">
-        <div class="wrap hero-grid">
-            <div>
-                <div class="eyebrow">Anonimizzazione documenti · 100% locale</div>
-                <h1>Usa l'AI sui documenti. <em>I dati sensibili restano fuori dal prompt.</em></h1>
-                <p class="lead">SafeDoc sostituisce nomi, IBAN, codici fiscali ed email con codici reversibili
-                    <strong>prima</strong> che il documento lasci il tuo computer. Quando la risposta dell'AI torna,
-                    rimette i valori reali in un clic.
-                </p>
-                <div class="actions">
-                    <a href="#download" class="btn btn-primary" id="hero-dl">↓ Scarica SafeDoc</a>
-                    <a href="#come" class="btn btn-ghost">Come funziona</a>
+    <main id="top">
+        <section class="hero">
+            <div class="wrap hero-grid">
+                <div>
+                    <div class="eyebrow">Anonimizzazione documenti · 100% locale</div>
+                    <h1>Usa l'AI sui documenti. <em>I dati sensibili restano fuori dal prompt.</em></h1>
+                    <p class="lead">SafeDoc sostituisce nomi, IBAN, codici fiscali ed email con codici reversibili
+                        <strong>prima</strong> che il documento lasci il tuo computer. Quando la risposta dell'AI torna,
+                        rimette i valori reali in un clic.
+                    </p>
+                    <div class="actions">
+                        <a href="#download" class="btn btn-primary" id="hero-dl">↓ Scarica SafeDoc</a>
+                        <a href="#come" class="btn btn-ghost">Come funziona</a>
+                    </div>
+                    <div class="meta">
+                        <span><b>Offline</b></span><span><b>Reversibile</b></span><span><b>Nessun account</b></span>
+                        <span id="os-windows">Windows</span><span id="os-macos">macOS</span><span
+                            id="os-linux">Linux</span>
+                    </div>
                 </div>
-                <div class="meta">
-                    <span><b>Offline</b></span><span><b>Reversibile</b></span><span><b>Nessun account</b></span>
-                    <span id="os-windows">Windows</span><span id="os-macos">macOS</span><span
-                        id="os-linux">Linux</span>
-                </div>
-            </div>
 
-            <div class="panel" aria-label="Esempio di anonimizzazione">
-                <div class="panel-bar"><i></i><i></i><i></i><span>SafeDoc · sessione ESC-20261007-7F3A</span></div>
-                <div class="sd-split">
-                    <div class="sd-half">
-                        <div class="sd-file">Originale <b>Contratto_Rossi.pdf</b></div>
-                        <div class="sd-doc">
-                            <div><span class="lbl">Cliente </span><span class="sd-pii">Mario Rossi</span> · <span
-                                    class="sd-pii">ACME Srl</span></div>
-                            <div><span class="lbl">C.F. </span><span class="sd-pii">RSSMRA80A01L400X</span></div>
-                            <div><span class="lbl">Email </span><span class="sd-pii">mario.rossi@acme.it</span>
+                <div class="panel" aria-label="Esempio di anonimizzazione">
+                    <div class="panel-bar"><i></i><i></i><i></i><span>SafeDoc · sessione ESC-20261007-7F3A</span></div>
+                    <div class="sd-split">
+                        <div class="sd-half">
+                            <div class="sd-file">Originale <b>Contratto_Rossi.pdf</b></div>
+                            <div class="sd-doc">
+                                <div><span class="lbl">Cliente </span><span class="sd-pii">Mario Rossi</span> · <span
+                                        class="sd-pii">ACME Srl</span></div>
+                                <div><span class="lbl">C.F. </span><span class="sd-pii">RSSMRA80A01L400X</span></div>
+                                <div><span class="lbl">Email </span><span class="sd-pii">mario.rossi@acme.it</span>
+                                </div>
+                                <div><span class="lbl">IBAN </span><span class="sd-pii">IT60 X054 2811 1010 …</span>
+                                </div>
                             </div>
-                            <div><span class="lbl">IBAN </span><span class="sd-pii">IT60 X054 2811 1010 …</span>
+                        </div>
+                        <div class="sd-arrow">anonimizza</div>
+                        <div class="sd-half">
+                            <div class="sd-file">Da inviare all'AI <b>Contratto_Rossi_SICURO_generico_7F3A.pdf</b></div>
+                            <div class="sd-doc">
+                                <div><span class="lbl">Cliente </span><span class="sd-code">PERSON_000001</span> · <span
+                                        class="sd-code">ORG_000001</span></div>
+                                <div><span class="lbl">C.F. </span><span class="sd-code">CF_000001</span></div>
+                                <div><span class="lbl">Email </span><span class="sd-code">EMAIL_000001</span></div>
+                                <div><span class="lbl">IBAN </span><span class="sd-code">IBAN_000001</span></div>
                             </div>
                         </div>
                     </div>
-                    <div class="sd-arrow">anonimizza</div>
-                    <div class="sd-half">
-                        <div class="sd-file">Da inviare all'AI <b>Contratto_Rossi_SICURO_generico_7F3A.pdf</b></div>
-                        <div class="sd-doc">
-                            <div><span class="lbl">Cliente </span><span class="sd-code">PERSON_000001</span> · <span
-                                    class="sd-code">ORG_000001</span></div>
-                            <div><span class="lbl">C.F. </span><span class="sd-code">CF_000001</span></div>
-                            <div><span class="lbl">Email </span><span class="sd-code">EMAIL_000001</span></div>
-                            <div><span class="lbl">IBAN </span><span class="sd-code">IBAN_000001</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="sd-foot"><span>5 entità protette</span><span class="ok">● chiave salvata in
+                    <div class="sd-foot"><span>5 entità protette</span><span class="ok">● chiave salvata in
                             locale</span></div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="pain">
-        <div class="wrap">
-            <div class="pain-title">Se succede ogni giorno, non è più un'eccezione.</div>
-            <ul>
-                <li>Incollare un contratto in una chat AI con nomi e IBAN dentro</li>
-                <li>Cancellare a mano i dati personali prima di ogni richiesta</li>
-                <li>Rimettere i dati veri nella risposta, riga per riga</li>
-                <li>Non sapere quali dati dei clienti sono già usciti dall'azienda</li>
-                <li>Rinunciare all'AI su CV, buste paga e pratiche per paura del GDPR</li>
-                <li>Trattare un listino come un contratto e perdere i numeri utili</li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="sec" id="come">
-        <div class="wrap">
-            <div class="sec-head">
-                <div class="eyebrow">Come funziona</div>
-                <h2>Quattro passi. <em>L'originale non si muove.</em></h2>
-                <p>Il documento originale resta sul tuo computer. All'AI arriva solo la copia protetta, e la chiave
-                    per tornare indietro resta a te.</p>
-            </div>
-            <div class="steps four">
-                <div class="step">
-                    <div class="step-n">01</div>
-                    <h3>Anonimizza</h3>
-                    <p>Trascini il documento: escono la copia <code>_SICURO</code> e la chiave di ripristino della
-                        sessione.</p>
-                </div>
-                <div class="step">
-                    <div class="step-n">02</div>
-                    <h3>Condividi</h3>
-                    <p>Invii all'AI solo il file <code>_SICURO</code>. Nomi, codici e conti restano codici.</p>
-                </div>
-                <div class="step">
-                    <div class="step-n">03</div>
-                    <h3>Riconcilia</h3>
-                    <p>Trascini la risposta dell'AI: i codici tornano automaticamente ai valori reali.</p>
-                </div>
-                <div class="step">
-                    <div class="step-n">04</div>
-                    <h3>Verifica</h3>
-                    <p>L'app conferma quante entità sono state ripristinate e segnala eventuali residui.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="sec" id="funzioni">
-        <div class="wrap">
-            <div class="sec-head">
-                <div class="eyebrow">Funzioni</div>
-                <h2>Conformità e produttività, <em>insieme.</em></h2>
-                <p>Per studi, PMI e team che vogliono usare l'AI generativa riducendo l'esposizione dei dati personali.</p>
-            </div>
-            <div class="feats">
-                <div class="feat">
-                    <div class="k">offline</div>
-                    <h3>I documenti restano sul computer</h3>
-                    <p>L'elaborazione avviene interamente sul computer. I documenti non vengono copiati né
-                        caricati su alcun server: la rete serve solo, su tua richiesta, per gli aggiornamenti e per
-                        scaricare i modelli di riconoscimento.</p>
-                </div>
-                <div class="feat">
-                    <div class="k">pattern + NER</div>
-                    <h3>Riconoscimento in italiano</h3>
-                    <p>Oltre 25 regole per email, IBAN, codice fiscale, partita IVA, telefoni, date, importi,
-                        indirizzi, CAP e targhe, con controllo delle cifre. Un modello linguistico italiano trova
-                        nomi e organizzazioni nel testo libero; un secondo modello copre i nomi stranieri.</p>
-                </div>
-                <div class="feat">
-                    <div class="k">reversibile</div>
-                    <h3>Chiave di ripristino per sessione</h3>
-                    <p>I codici tornano ai valori reali con la chiave della sessione, che resta solo sul tuo disco.
-                        Ogni operazione resta nello storico con esito e verifica.</p>
-                </div>
-                <div class="feat">
-                    <div class="k">PDF · DOCX · XLSX · EML</div>
-                    <h3>Multi-formato</h3>
-                    <p>PDF, Word, Excel, email con gli allegati supportati, TXT, Markdown, CSV, JSON. In Word ed
-                        Excel vengono trattati anche commenti, intestazioni e proprietà del file. I PDF possono
-                        uscire in Word con il layout preservato (richiede LibreOffice).</p>
-                </div>
-                <div class="feat">
-                    <div class="k">marcatore #</div>
-                    <h3>Controllo manuale</h3>
-                    <p>Scrivi <code>#parola</code> e quella parola viene protetta sempre, con priorità sul
-                        riconoscimento automatico.</p>
-                </div>
-                <div class="feat">
-                    <div class="k">modalità lite</div>
-                    <h3>Report e listini leggibili</h3>
-                    <p>Maschera solo gli identificatori, come la ragione sociale. Numeri, descrizioni e struttura
-                        restano analizzabili.</p>
-                </div>
-                <div class="feat">
-                    <div class="k">regole</div>
-                    <h3>Regole su misura, senza codice</h3>
-                    <p>Liste di parole, elenchi importati da CSV o Excel (anche con errori di battitura), regole
-                        pronte per ragioni sociali, CAP e targhe, generatore da schema. Niente espressioni
-                        regolari.</p>
-                </div>
-                <div class="feat">
-                    <div class="k">marchio</div>
-                    <h3>Marchio di sessione</h3>
-                    <p>Ogni documento protetto porta il marchio ESC e l'ID di sessione, usati per il ripristino
-                        automatico: nelle proprietà del file e, per PDF, testo, CSV ed email, anche come riga
-                        visibile.</p>
-                </div>
-                <div class="feat">
-                    <div class="k">revisione</div>
-                    <h3>Conferma prima di scrivere</h3>
-                    <p>Opzionale: vedi l'elenco di ciò che è stato trovato, togli i falsi allarmi, aggiungi ciò che
-                        manca. Solo dopo la tua conferma viene creato il documento.</p>
-                </div>
-                <div class="feat">
-                    <div class="k">leggero · equilibrato · preciso</div>
-                    <h3>Modelli a scelta</h3>
-                    <p>Scegli la dimensione del modello italiano in base al computer e ai documenti; i modelli più
-                        precisi si scaricano solo quando servono.</p>
-                </div>
-                <div class="feat">
-                    <div class="k">LLM locale · opzionale</div>
-                    <h3>Un secondo controllo, sul tuo PC</h3>
-                    <p>Con Ollama installato, un modello locale suggerisce i nomi che gli altri livelli non
-                        trovano. I suggerimenti compaiono nella revisione e non vengono mai applicati da soli.</p>
-                </div>
-                <div class="feat">
-                    <div class="k">setup</div>
-                    <h3>Verifica e configurazione guidata</h3>
-                    <p>Prova le tue impostazioni su un documento di esempio, ripeti la configurazione guidata ed
-                        esporta le scelte per usarle su un altro computer.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="sec" id="privacy">
-        <div class="wrap pov">
-            <div class="pov-text">
-                <div class="eyebrow">Privacy by design</div>
-                <h2>I dati non escono <em>dal perimetro.</em></h2>
-                <p>Nessun cloud, nessun account, nessuna telemetria. SafeDoc è un'app desktop che lavora anche senza
-                    connessione; la rete serve solo, su richiesta, per gli aggiornamenti e per scaricare i modelli
-                    di riconoscimento.</p>
-                <ul class="check">
-                    <li>Elaborazione 100% locale, anche offline</li>
-                    <li>Chiavi di ripristino salvate solo sul tuo disco</li>
-                    <li>Storico e impostazioni nella cartella ESC SafeDoc sul tuo computer</li>
-                    <li>Controllo dei residui a ogni anonimizzazione, con revisione prima di scrivere</li>
+        <section class="pain">
+            <div class="wrap">
+                <div class="pain-title">Se succede ogni giorno, non è più un'eccezione.</div>
+                <ul>
+                    <li>Incollare un contratto in una chat AI con nomi e IBAN dentro</li>
+                    <li>Cancellare a mano i dati personali prima di ogni richiesta</li>
+                    <li>Rimettere i dati veri nella risposta, riga per riga</li>
+                    <li>Non sapere quali dati dei clienti sono già usciti dall'azienda</li>
+                    <li>Rinunciare all'AI su CV, buste paga e pratiche per paura del GDPR</li>
+                    <li>Trattare un listino come un contratto e perdere i numeri utili</li>
                 </ul>
-                <p class="form-note">SafeDoc sostituisce i dati con codici reversibili (pseudonimizzazione) usando
-                    regole e modelli: nessun riconoscimento è perfetto. Per questo ci sono la revisione e il
-                    controllo dei residui; sui documenti molto delicati controlla sempre il risultato.</p>
             </div>
-            <div class="panel">
-                <div class="panel-bar"><i></i><i></i><i></i><span>storico · oggi</span></div>
-                <div class="panel-body log">
-                    <div><span>09:14:02</span><span>Contratto_Rossi.pdf → _SICURO_generico_7F3A.pdf · 5 entità</span></div>
-                    <div><span>09:14:02</span><span>chiave ESC-20261007-7F3A salvata in ESC_Chiavi</span></div>
-                    <div><span>09:31:47</span><span>Risposta_AI.docx ricevuta · marchio ESC-20261007-7F3A</span></div>
-                    <div><span>09:31:48</span><span class="ok">Entità ripristinate: 5/5 (100%)</span></div>
-                    <div><span>09:31:48</span><span class="ok">verifica: nessun codice rimasto nel testo</span></div>
+        </section>
+
+        <section class="sec" id="come">
+            <div class="wrap">
+                <div class="sec-head">
+                    <div class="eyebrow">Come funziona</div>
+                    <h2>Quattro passi. <em>L'originale non si muove.</em></h2>
+                    <p>Il documento originale resta sul tuo computer. All'AI arriva solo la copia protetta, e la chiave
+                        per tornare indietro resta a te.</p>
+                </div>
+                <div class="steps four">
+                    <div class="step">
+                        <div class="step-n">01</div>
+                        <h3>Anonimizza</h3>
+                        <p>Trascini il documento: escono la copia <code>_SICURO</code> e la chiave di ripristino della
+                            sessione.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-n">02</div>
+                        <h3>Condividi</h3>
+                        <p>Invii all'AI solo il file <code>_SICURO</code>. Nomi, codici e conti restano codici.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-n">03</div>
+                        <h3>Riconcilia</h3>
+                        <p>Trascini la risposta dell'AI: i codici tornano automaticamente ai valori reali.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-n">04</div>
+                        <h3>Verifica</h3>
+                        <p>L'app conferma quante entità sono state ripristinate e segnala eventuali residui.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="sec" id="per-chi">
+        <section class="sec" id="funzioni">
+            <div class="wrap">
+                <div class="sec-head">
+                    <div class="eyebrow">Funzioni</div>
+                    <h2>Conformità e produttività, <em>insieme.</em></h2>
+                    <p>Per studi, PMI e team che vogliono usare l'AI generativa riducendo l'esposizione dei dati
+                        personali.</p>
+                </div>
+                <div class="feats">
+                    <div class="feat">
+                        <div class="k">offline</div>
+                        <h3>I documenti restano sul computer</h3>
+                        <p>L'elaborazione avviene interamente sul computer. I documenti non vengono copiati né
+                            caricati su alcun server: la rete serve solo, su tua richiesta, per gli aggiornamenti e per
+                            scaricare i modelli di riconoscimento.</p>
+                    </div>
+                    <div class="feat">
+                        <div class="k">pattern + NER</div>
+                        <h3>Riconoscimento in italiano</h3>
+                        <p>Oltre 25 regole per email, IBAN, codice fiscale, partita IVA, telefoni, date, importi,
+                            indirizzi, CAP e targhe, con controllo delle cifre. Un modello linguistico italiano trova
+                            nomi e organizzazioni nel testo libero; un secondo modello copre i nomi stranieri.</p>
+                    </div>
+                    <div class="feat">
+                        <div class="k">reversibile</div>
+                        <h3>Chiave di ripristino per sessione</h3>
+                        <p>I codici tornano ai valori reali con la chiave della sessione, che resta solo sul tuo disco.
+                            Ogni operazione resta nello storico con esito e verifica.</p>
+                    </div>
+                    <div class="feat">
+                        <div class="k">PDF · DOCX · XLSX · EML</div>
+                        <h3>Multi-formato</h3>
+                        <p>PDF, Word, Excel, email con gli allegati supportati, TXT, Markdown, CSV, JSON. In Word ed
+                            Excel vengono trattati anche commenti, intestazioni e proprietà del file. I PDF possono
+                            uscire in Word con il layout preservato (richiede LibreOffice).</p>
+                    </div>
+                    <div class="feat">
+                        <div class="k">marcatore #</div>
+                        <h3>Controllo manuale</h3>
+                        <p>Scrivi <code>#parola</code> e quella parola viene protetta sempre, con priorità sul
+                            riconoscimento automatico.</p>
+                    </div>
+                    <div class="feat">
+                        <div class="k">modalità lite</div>
+                        <h3>Report e listini leggibili</h3>
+                        <p>Maschera solo gli identificatori, come la ragione sociale. Numeri, descrizioni e struttura
+                            restano analizzabili.</p>
+                    </div>
+                    <div class="feat">
+                        <div class="k">regole</div>
+                        <h3>Regole su misura, senza codice</h3>
+                        <p>Liste di parole, elenchi importati da CSV o Excel (anche con errori di battitura), regole
+                            pronte per ragioni sociali, CAP e targhe, generatore da schema. Niente espressioni
+                            regolari.</p>
+                    </div>
+                    <div class="feat">
+                        <div class="k">marchio</div>
+                        <h3>Marchio di sessione</h3>
+                        <p>Ogni documento protetto porta il marchio ESC e l'ID di sessione, usati per il ripristino
+                            automatico: nelle proprietà del file e, per PDF, testo, CSV ed email, anche come riga
+                            visibile.</p>
+                    </div>
+                    <div class="feat">
+                        <div class="k">revisione</div>
+                        <h3>Conferma prima di scrivere</h3>
+                        <p>Opzionale: vedi l'elenco di ciò che è stato trovato, togli i falsi allarmi, aggiungi ciò che
+                            manca. Solo dopo la tua conferma viene creato il documento.</p>
+                    </div>
+                    <div class="feat">
+                        <div class="k">leggero · equilibrato · preciso</div>
+                        <h3>Modelli a scelta</h3>
+                        <p>Scegli la dimensione del modello italiano in base al computer e ai documenti; i modelli più
+                            precisi si scaricano solo quando servono.</p>
+                    </div>
+                    <div class="feat">
+                        <div class="k">LLM locale · opzionale</div>
+                        <h3>Un secondo controllo, sul tuo PC</h3>
+                        <p>Con Ollama installato, un modello locale suggerisce i nomi che gli altri livelli non
+                            trovano. I suggerimenti compaiono nella revisione e non vengono mai applicati da soli.</p>
+                    </div>
+                    <div class="feat">
+                        <div class="k">setup</div>
+                        <h3>Verifica e configurazione guidata</h3>
+                        <p>Prova le tue impostazioni su un documento di esempio, ripeti la configurazione guidata ed
+                            esporta le scelte per usarle su un altro computer.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec" id="privacy">
+            <div class="wrap pov">
+                <div class="pov-text">
+                    <div class="eyebrow">Privacy by design</div>
+                    <h2>I dati non escono <em>dal perimetro.</em></h2>
+                    <p>Nessun cloud, nessun account, nessuna telemetria. SafeDoc è un'app desktop che lavora anche senza
+                        connessione; la rete serve solo, su richiesta, per gli aggiornamenti e per scaricare i modelli
+                        di riconoscimento.</p>
+                    <ul class="check">
+                        <li>Elaborazione 100% locale, anche offline</li>
+                        <li>Chiavi di ripristino salvate solo sul tuo disco</li>
+                        <li>Storico e impostazioni nella cartella ESC SafeDoc sul tuo computer</li>
+                        <li>Controllo dei residui a ogni anonimizzazione, con revisione prima di scrivere</li>
+                    </ul>
+                    <p class="form-note">SafeDoc sostituisce i dati con codici reversibili (pseudonimizzazione) usando
+                        regole e modelli: nessun riconoscimento è perfetto. Per questo ci sono la revisione e il
+                        controllo dei residui; sui documenti molto delicati controlla sempre il risultato.</p>
+                </div>
+                <div class="panel">
+                    <div class="panel-bar"><i></i><i></i><i></i><span>storico · oggi</span></div>
+                    <div class="panel-body log">
+                        <div><span>09:14:02</span><span>Contratto_Rossi.pdf → _SICURO_generico_7F3A.pdf · 5
+                                entità</span></div>
+                        <div><span>09:14:02</span><span>chiave ESC-20261007-7F3A salvata in ESC_Chiavi</span></div>
+                        <div><span>09:31:47</span><span>Risposta_AI.docx ricevuta · marchio ESC-20261007-7F3A</span>
+                        </div>
+                        <div><span>09:31:48</span><span class="ok">Entità ripristinate: 5/5 (100%)</span></div>
+                        <div><span>09:31:48</span><span class="ok">verifica: nessun codice rimasto nel testo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec" id="per-chi">
+            <div class="wrap">
+                <div class="sec-head">
+                    <div class="eyebrow">Per chi</div>
+                    <h2>Per chi tratta dati sensibili <em>ogni giorno.</em></h2>
+                </div>
+                <div class="who">
+                    <div>
+                        <h3>Studi professionali</h3>
+                        <p>Avvocati, commercialisti e consulenti che analizzano pratiche e contratti con l'AI.</p>
+                    </div>
+                    <div>
+                        <h3>PMI e uffici HR</h3>
+                        <p>CV, buste paga e comunicazioni gestiti riducendo l'esposizione dei dati dei dipendenti.</p>
+                    </div>
+                    <div>
+                        <h3>Sanità e PA</h3>
+                        <p>Nomi, codici e riferimenti dei documenti clinici e amministrativi sostituiti prima di
+                            qualsiasi elaborazione esterna. Le diagnosi scritte in testo libero richiedono la revisione
+                            manuale.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec get" id="download">
+            <div class="wrap get-grid">
+                <div class="sec-head" style="margin-bottom:0">
+                    <div class="eyebrow">Download</div>
+                    <h2>Pronto a usare l'AI <em>in sicurezza?</em></h2>
+                    <p>Compila il form per scaricare ESC SafeDoc per Windows, macOS o Linux.</p>
+                </div>
+
+                <form class="form" id="sd-form" novalidate>
+                    <div class="row2">
+                        <div class="field"><label for="nome">Nome <b>*</b></label><input id="nome" name="nome"
+                                type="text" required autocomplete="given-name"></div>
+                        <div class="field"><label for="cognome">Cognome <b>*</b></label><input id="cognome"
+                                name="cognome" type="text" required autocomplete="family-name"></div>
+                    </div>
+                    <div class="field"><label for="email">Email <b>*</b></label><input id="email" name="email"
+                            type="email" required autocomplete="email" placeholder="nome@azienda.it"></div>
+                    <p class="form-note" id="form-err" hidden>Compila nome, cognome e un indirizzo email valido.</p>
+                    <button type="submit" class="btn btn-primary" id="submit-btn">Scarica SafeDoc →</button>
+                    <div id="dl-wrap" hidden>
+                        <p class="dl-ok">Grazie. Scegli la versione per il tuo sistema.</p>
+                        <div class="dl" id="dl-list" style="margin-top:10px"></div>
+                    </div>
+                    <p class="form-note">Usiamo nome, cognome ed email solo per avvisarti degli aggiornamenti di
+                        SafeDoc. Puoi chiederne la cancellazione scrivendo a info@esconsulting.it.</p>
+                    <p class="form-note">macOS: solo Mac con Apple Silicon. L'app non è firmata da Apple: al primo
+                        avvio apri Impostazioni di Sistema → Privacy e sicurezza → «Apri comunque». Windows e Linux:
+                        64 bit.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="foot">
         <div class="wrap">
-            <div class="sec-head">
-                <div class="eyebrow">Per chi</div>
-                <h2>Per chi tratta dati sensibili <em>ogni giorno.</em></h2>
-            </div>
-            <div class="who">
+            <div class="foot-grid">
                 <div>
-                    <h3>Studi professionali</h3>
-                    <p>Avvocati, commercialisti e consulenti che analizzano pratiche e contratti con l'AI.</p>
-                </div>
-                <div>
-                    <h3>PMI e uffici HR</h3>
-                    <p>CV, buste paga e comunicazioni gestiti riducendo l'esposizione dei dati dei dipendenti.</p>
-                </div>
-                <div>
-                    <h3>Sanità e PA</h3>
-                    <p>Nomi, codici e riferimenti dei documenti clinici e amministrativi sostituiti prima di qualsiasi elaborazione esterna. Le diagnosi scritte in testo libero richiedono la revisione manuale.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="sec get" id="download">
-        <div class="wrap get-grid">
-            <div class="sec-head" style="margin-bottom:0">
-                <div class="eyebrow">Download</div>
-                <h2>Pronto a usare l'AI <em>in sicurezza?</em></h2>
-                <p>Compila il form per scaricare ESC SafeDoc per Windows, macOS o Linux.</p>
-            </div>
-
-            <form class="form" id="sd-form" novalidate>
-                <div class="row2">
-                    <div class="field"><label for="nome">Nome <b>*</b></label><input id="nome" name="nome"
-                                                                                     type="text" required autocomplete="given-name"></div>
-                    <div class="field"><label for="cognome">Cognome <b>*</b></label><input id="cognome"
-                                                                                           name="cognome" type="text" required autocomplete="family-name"></div>
-                </div>
-                <div class="field"><label for="email">Email <b>*</b></label><input id="email" name="email"
-                                                                                   type="email" required autocomplete="email" placeholder="nome@azienda.it"></div>
-                <p class="form-note" id="form-err" hidden>Compila nome, cognome e un indirizzo email valido.</p>
-                <button type="submit" class="btn btn-primary" id="submit-btn">Scarica SafeDoc →</button>
-                <div id="dl-wrap" hidden>
-                    <p class="dl-ok">Grazie. Scegli la versione per il tuo sistema.</p>
-                    <div class="dl" id="dl-list" style="margin-top:10px"></div>
-                </div>
-                <p class="form-note">Usiamo nome, cognome ed email solo per avvisarti degli aggiornamenti di
-                    SafeDoc. Puoi chiederne la cancellazione scrivendo a info@esconsulting.it.</p>
-                <p class="form-note">macOS: solo Mac con Apple Silicon. L'app non è firmata da Apple: al primo
-                    avvio apri Impostazioni di Sistema → Privacy e sicurezza → «Apri comunque». Windows e Linux:
-                    64 bit.</p>
-            </form>
-        </div>
-    </section>
-</main>
-
-<footer class="foot">
-    <div class="wrap">
-        <div class="foot-grid">
-            <div>
-                <h4>ESC Enterprise Software Consulting srl</h4><span>Via Torriani, 13 · 24047 Treviglio
+                    <h4>ESC Enterprise Software Consulting srl</h4><span>Via Torriani, 13 · 24047 Treviglio
                         (BG)</span><span>Tel. +39 0363 302050</span><span>info@esconsulting.it</span><span>P.Iva
                         IT03031480167</span>
+                </div>
+                <div>
+                    <h4>Strumenti AI di ESC</h4><a href="https://escsrl.github.io/esc-safedoc-releases/" target="_blank"
+                        rel="noopener">SafeDoc · anonimizza i documenti</a><a
+                        href="https://escsrl.github.io/prompt-book/" target="_blank" rel="noopener">PromptBook · i
+                        prompt che funzionano</a><span>TaskBook · in sviluppo</span>
+                </div>
+                <div>
+                    <h4>ESC</h4><a href="https://esconsulting.it/" target="_blank" rel="noopener">esconsulting.it</a><a
+                        href="https://www.ezdoc.it/" target="_blank" rel="noopener">EZDoc</a><a
+                        href="https://www.linkedin.com/company/esc-enterprise-software-consulting/" target="_blank"
+                        rel="noopener">LinkedIn</a><a href="https://github.com/escsrl" target="_blank"
+                        rel="noopener">GitHub</a>
+                </div>
             </div>
-            <div>
-                <h4>Strumenti AI di ESC</h4><a href="https://escsrl.github.io/esc-safedoc-releases/" target="_blank"
-                                               rel="noopener">SafeDoc · anonimizza i documenti</a><a
-                    href="https://escsrl.github.io/prompt-book/" target="_blank" rel="noopener">PromptBook · i
-                prompt che funzionano</a><span>TaskBook · in sviluppo</span>
-            </div>
-            <div>
-                <h4>ESC</h4><a href="https://esconsulting.it/" target="_blank" rel="noopener">esconsulting.it</a><a
-                    href="https://www.ezdoc.it/" target="_blank" rel="noopener">EZDoc</a><a
-                    href="https://www.linkedin.com/company/esc-enterprise-software-consulting/" target="_blank"
-                    rel="noopener">LinkedIn</a><a href="https://github.com/escsrl" target="_blank"
-                                                  rel="noopener">GitHub</a>
-            </div>
-        </div>
-        <div class="foot-copy"><span>© 2026 ESC Enterprise Software Consulting srl · dal 2003</span><span>v3.9.8 ·
+            <div class="foot-copy"><span>© 2026 ESC Enterprise Software Consulting srl · dal 2003</span><span>v3.9.8 ·
                     Elaborazione esclusivamente locale</span></div>
-    </div>
-</footer>
+        </div>
+    </footer>
 
-<script>
-    window.escDetectOS = function () {
-        var p = (navigator.platform || "").toLowerCase(), u = navigator.userAgent.toLowerCase();
-        if (p.indexOf("win") > -1 || u.indexOf("windows") > -1) return "windows";
-        if (p.indexOf("mac") > -1 || u.indexOf("macintosh") > -1) return "macos";
-        if (p.indexOf("linux") > -1 || u.indexOf("linux") > -1) return "linux";
-        return "fallback";
-    };
-    (function () {
-        var root = document.documentElement, btn = document.getElementById("theme-btn");
-        try { var s = localStorage.getItem("esc-theme"); if (s) root.setAttribute("data-theme", s); } catch (e) { }
-        btn.addEventListener("click", function () {
-            var cur = root.getAttribute("data-theme") || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
-            var next = cur === "light" ? "dark" : "light";
-            root.setAttribute("data-theme", next);
-            try { localStorage.setItem("esc-theme", next); } catch (e) { }
-        });
-    })();
-</script>
-<script>
-    (function () {
-        var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzy3-j8kd2buEs16YjIqAokaPN02lptqcfhKq2y0UnOjflTW4HdOm53EbOc_gKfYLOH/exec";
-        var LINKS = {
-            windows: { label: "Windows", file: ".exe · 64 bit", url: "https://github.com/escsrl/esc-safedoc-releases/releases/download/v3.9.8/ESC-SafeDoc_3.9.8_x64-setup.exe" },
-            macos: { label: "macOS", file: ".dmg · Apple Silicon (M1 e successivi)", url: "https://github.com/escsrl/esc-safedoc-releases/releases/download/v3.9.8/ESC-SafeDoc_3.9.8_aarch64.dmg" },
-            linux: { label: "Linux", file: ".AppImage · amd64", url: "https://github.com/escsrl/esc-safedoc-releases/releases/download/v3.9.8/ESC-SafeDoc_3.9.8_amd64.AppImage" }
+    <script>
+        window.escDetectOS = function () {
+            var p = (navigator.platform || "").toLowerCase(), u = navigator.userAgent.toLowerCase();
+            if (p.indexOf("win") > -1 || u.indexOf("windows") > -1) return "windows";
+            if (p.indexOf("mac") > -1 || u.indexOf("macintosh") > -1) return "macos";
+            if (p.indexOf("linux") > -1 || u.indexOf("linux") > -1) return "linux";
+            return "fallback";
         };
-        var os = window.escDetectOS();
-        if (LINKS[os]) {
-            document.getElementById("hero-dl").textContent = "↓ Scarica per " + LINKS[os].label;
-            document.getElementById("os-" + os).classList.add("on");
-        }
-        var form = document.getElementById("sd-form");
-        var btn = document.getElementById("submit-btn");
-        var busy = false;
-
-        function renderLinks() {
-            var order = ["windows", "macos", "linux"].sort(function (a, b) { return (b === os) - (a === os); });
-            var list = document.getElementById("dl-list");
-            list.innerHTML = "";
-            order.forEach(function (k) {
-                var a = document.createElement("a");
-                a.href = LINKS[k].url; a.rel = "noopener"; a.target = "_blank";
-                if (k === os) a.className = "primary";
-                a.innerHTML = "↓ " + LINKS[k].label + " <span>" + LINKS[k].file + " · v3.9.8</span>";
-                list.appendChild(a);
+        (function () {
+            var root = document.documentElement, btn = document.getElementById("theme-btn");
+            try { var s = localStorage.getItem("esc-theme"); if (s) root.setAttribute("data-theme", s); } catch (e) { }
+            btn.addEventListener("click", function () {
+                var cur = root.getAttribute("data-theme") || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+                var next = cur === "light" ? "dark" : "light";
+                root.setAttribute("data-theme", next);
+                try { localStorage.setItem("esc-theme", next); } catch (e) { }
             });
-            document.getElementById("dl-wrap").hidden = false;
-        }
+        })();
+    </script>
+    <script>
+        (function () {
+            var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzy3-j8kd2buEs16YjIqAokaPN02lptqcfhKq2y0UnOjflTW4HdOm53EbOc_gKfYLOH/exec";
+            var LINKS = {
+                windows: { label: "Windows", file: ".exe · 64 bit", url: "https://github.com/escsrl/esc-safedoc-releases/releases/download/v3.9.8/ESC-SafeDoc_3.9.8_x64-setup.exe" },
+                macos: { label: "macOS", file: ".dmg · Apple Silicon (M1 e successivi)", url: "https://github.com/escsrl/esc-safedoc-releases/releases/download/v3.9.8/ESC-SafeDoc_3.9.8_aarch64.dmg" },
+                linux: { label: "Linux", file: ".AppImage · amd64", url: "https://github.com/escsrl/esc-safedoc-releases/releases/download/v3.9.8/ESC-SafeDoc_3.9.8_amd64.AppImage" }
+            };
+            var os = window.escDetectOS();
+            if (LINKS[os]) {
+                document.getElementById("hero-dl").textContent = "↓ Scarica per " + LINKS[os].label;
+                document.getElementById("os-" + os).classList.add("on");
+            }
+            var form = document.getElementById("sd-form");
+            var btn = document.getElementById("submit-btn");
+            var busy = false;
 
-        form.addEventListener("submit", function (e) {
-            e.preventDefault();
-            if (busy) return;
-            var ok = form.nome.value.trim() && form.cognome.value.trim() && form.email.checkValidity() && form.email.value.trim();
-            document.getElementById("form-err").hidden = !!ok;
-            if (!ok) return;
-            busy = true; btn.disabled = true; btn.textContent = "Invio in corso…";
-            var payload = { nome: form.nome.value, cognome: form.cognome.value, email: form.email.value };
-            var done = function () { btn.textContent = "Scegli la tua versione ↓"; renderLinks(); };
-            fetch(SCRIPT_URL, { method: "POST", body: JSON.stringify(payload) }).then(done, done);
-        });
-    })();
-</script>
+            function renderLinks() {
+                var order = ["windows", "macos", "linux"].sort(function (a, b) { return (b === os) - (a === os); });
+                var list = document.getElementById("dl-list");
+                list.innerHTML = "";
+                order.forEach(function (k) {
+                    var a = document.createElement("a");
+                    a.href = LINKS[k].url; a.rel = "noopener"; a.target = "_blank";
+                    if (k === os) a.className = "primary";
+                    a.innerHTML = "↓ " + LINKS[k].label + " <span>" + LINKS[k].file + " · v3.9.8</span>";
+                    list.appendChild(a);
+                });
+                document.getElementById("dl-wrap").hidden = false;
+            }
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                if (busy) return;
+                var ok = form.nome.value.trim() && form.cognome.value.trim() && form.email.checkValidity() && form.email.value.trim();
+                document.getElementById("form-err").hidden = !!ok;
+                if (!ok) return;
+                busy = true; btn.disabled = true; btn.textContent = "Invio in corso…";
+                var payload = { nome: form.nome.value, cognome: form.cognome.value, email: form.email.value };
+                var done = function () { btn.textContent = "Scegli la tua versione ↓"; renderLinks(); };
+                fetch(SCRIPT_URL, { method: "POST", body: JSON.stringify(payload) }).then(done, done);
+            });
+        })();
+    </script>
 
 </body>
 

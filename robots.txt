@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://escsrl.github.io/esc-safedoc-releases/sitemap.xml
